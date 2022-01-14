@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: ms-payroll
+  data:
+    mongodb:
+      uri: mongodb://admin:admin@172.22.145.50:27017/?authSource=payroll&readPreference=primary
+      database: payroll
+  kafka:
+    producer:
+      bootstrap-servers: 172.22.145.50:29092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
