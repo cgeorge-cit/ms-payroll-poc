@@ -6,10 +6,25 @@ spring:
     name: ms-payroll
   data:
     mongodb:
-      uri: mongodb://admin:admin@172.22.145.50:27017/?authSource=payroll&readPreference=primary
+      uri: mongodb://admin:admin@172.22.153.55:27017/?authSource=payroll&readPreference=primary
       database: payroll
   kafka:
     producer:
-      bootstrap-servers: 172.22.145.50:29092
+      bootstrap-servers: 172.22.153.55:29092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+    metrics:
+      export:
+        prometheus:
+          enabled: true
+    endpoint:
+      metrics:
+        enabled: false
+      prometheus:
+        enabled: true

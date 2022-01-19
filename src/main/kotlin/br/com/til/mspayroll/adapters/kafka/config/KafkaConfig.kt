@@ -10,7 +10,7 @@ import org.springframework.kafka.core.KafkaAdmin
 class KafkaConfig {
 
     @Bean
-    fun admin() = KafkaAdmin(mapOf(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG to "172.22.145.50:29092"))
+    fun admin() = KafkaAdmin(mapOf(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG to "172.22.153.55:29092"))
 
     @Bean
     fun payrollTopic() = TopicBuilder.name("payrollTopic").build()
