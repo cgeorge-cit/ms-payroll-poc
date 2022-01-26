@@ -1,4 +1,4 @@
-# MS-PERSON
+# MS-PAYROLL
 Projeto desenvolvido para demonstração de um Kafka Produtor e Consumidor.
 Foi utilizado nesse projeto idéias de comunicação assincrona e sincrona.
 
