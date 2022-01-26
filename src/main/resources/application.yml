@@ -4,13 +4,26 @@ server:
 spring:
   application:
     name: ms-payroll
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.24.237.244:3306/batch_repo
+    username: batch_user
+    password: 123456
+  sql:
+    init:
+      plataform: mysql
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false
   data:
     mongodb:
-      uri: mongodb://admin:admin@172.22.153.55:27017/?authSource=payroll&readPreference=primary
+      uri: mongodb://admin:admin@172.24.237.244:27017/?authSource=payroll&readPreference=primary
       database: payroll
   kafka:
     producer:
-      bootstrap-servers: 172.22.153.55:29092
+      bootstrap-servers: 172.24.237.244:29092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 

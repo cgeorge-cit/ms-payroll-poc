@@ -4,8 +4,9 @@ import org.springframework.data.mongodb.core.mapping.Document
 import java.math.BigDecimal
 
 @Document("personPayRoll")
-class PersonPayRoll(
+data class PersonPayRoll(
     var id: String? = null,
     var cpf: String,
-    var salary: BigDecimal
+    var salary: BigDecimal,
+    var fgts: BigDecimal = BigDecimal.ZERO
 )
