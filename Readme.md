@@ -41,7 +41,7 @@ Para subir os containers, basta executar o comando "docker-compose up" na raiz d
 
 ### Diagramas
 
-![Diagrama Arquitetura](./assets/Diagrama1.png)
+![Diagrama Arquitetura](./assets/Diagram1.png)
 
 
 ![Diagrama Kafka](./assets/Diagrama2.png)
